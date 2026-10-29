@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Helena Duarte | Yoga e Bem-Estar</title>
+<meta name="description" content="Práticas de yoga que integram movimento, respiração e consciência, inspiradas na filosofia do yoga e no trabalho com os chakras.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bark:#150F0A; --soil:#2A1B12; --clay:#7A4B2E; --sand:#E9DFCF; --bone:#F4ECDE;
+  --amber:#E0A458; --muted:#B9A790; --ink:#2A1B12;
+  --serif:"Fraunces",Georgia,serif; --sans:"Albert Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --pad:clamp(1.25rem,5vw,4.5rem); --max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font:400 clamp(1rem,.95rem + .22vw,1.1rem)/1.7 var(--sans);color:var(--bone);background:var(--bark);overflow-x:hidden}
+img{display:block;max-width:100%}
+h1,h2,h3,p,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:clamp(2rem,1.3rem + 3vw,3.8rem);max-width:17ch}
+h3{font-weight:400}
+p{text-wrap:pretty}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--pad)}
+section{position:relative;padding-block:clamp(4.5rem,10vw,8.5rem);isolation:isolate}
+.light{background:var(--sand);color:var(--ink)}
+.lead{max-width:48ch;color:var(--muted);font-size:clamp(1.05rem,1rem + .35vw,1.25rem)}
+.light .lead{color:#5B4636}
+.bg{position:absolute;inset:0;z-index:-2;background:var(--soil);overflow:hidden}
+.bg img{width:100%;height:100%;object-fit:cover}
+.bg::after{content:"";position:absolute;inset:0;background:rgba(21,15,10,.7)}
+
+/* vidro */
+.glass{background:linear-gradient(135deg,rgba(244,236,222,.16),rgba(244,236,222,.04));border:1px solid rgba(244,236,222,.2);box-shadow:inset 0 1px 0 rgba(244,236,222,.25),0 26px 60px -24px rgba(0,0,0,.6);-webkit-backdrop-filter:blur(18px) saturate(130%);backdrop-filter:blur(18px) saturate(130%);border-radius:1.5rem}
+@supports not (backdrop-filter:blur(1px)){.glass{background:rgba(42,27,18,.92)}}
+
+.cta{display:inline-flex;align-items:center;min-height:3.25rem;padding:.85rem 1.8rem;border-radius:999px;background:var(--amber);color:#24160D;font-weight:500;text-decoration:none;box-shadow:0 10px 30px -12px rgba(224,164,88,.7);transition:transform .25s,background .25s}
+.cta:hover{background:#EDB872}
+.cta:active{transform:scale(.98)}
+
+/* topo */
+.bar{position:fixed;top:.75rem;left:50%;translate:-50% 0;z-index:30;width:min(calc(100% - 1.5rem),var(--max));display:flex;justify-content:space-between;align-items:center;padding:.5rem .6rem .5rem 1.3rem;border-radius:999px}
+.name{font:400 1.15rem/1 var(--serif);letter-spacing:-.01em;color:var(--bone);text-decoration:none}
+.name small{display:block;margin-top:.3rem;font:400 .72rem/1 var(--sans);letter-spacing:.02em;color:var(--muted)}
+.bar .cta{min-height:2.6rem;padding:.5rem 1.2rem;font-size:.92rem}
+@media(max-width:560px){.bar .cta{padding-inline:.9rem;font-size:.8rem}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding-block:clamp(6.5rem,12vh,8rem) clamp(3rem,7vw,5rem);background:radial-gradient(ellipse 60% 70% at 78% 45%,#3A2418 0%,var(--bark) 72%);overflow:hidden}
+.hx{width:100%;display:grid;gap:clamp(3rem,7vw,4.5rem);align-items:center}
+.hx h1{display:grid;gap:.08em;max-width:12ch;font-weight:400;font-size:clamp(2.5rem,1rem + 5.2vw,5.4rem);line-height:1.02;letter-spacing:-.03em;color:var(--bone)}
+.hx h1::before{content:"";width:4.5rem;height:3px;background:var(--amber);margin-bottom:clamp(1rem,2.5vh,1.75rem)}
+.hx h1 span{display:block;overflow:hidden;padding:.02em .08em .1em 0;text-wrap:balance}
+.hx h1 b{display:block;font-weight:400;transform:translateY(108%);animation:up 1.1s cubic-bezier(.2,.75,.15,1) forwards}
+.hx h1 .l2{font-style:italic;margin-top:.2em}
+.hx h1 .l2 b{animation-delay:.22s}
+@keyframes up{to{transform:none}}
+.hx .sub{margin-top:1.75rem;max-width:42ch;color:#E3D6C2;font-size:clamp(1.05rem,1rem + .3vw,1.2rem);opacity:0;animation:fade2 .9s .6s forwards}
+.hx .cta{margin-top:2.25rem;opacity:0;animation:fade2 .9s .8s forwards}
+@keyframes fade2{to{opacity:1}}
+.vis{position:relative;width:min(100%,27rem);aspect-ratio:4/5;justify-self:center;margin:0 0 1rem 1.5rem}
+.vis .mandala{position:absolute;z-index:0;left:50%;top:50%;translate:-50% -50%;width:150%;aspect-ratio:1;pointer-events:none;animation:spin 180s linear infinite}
+.vis .mandala circle{fill:none;stroke:var(--amber);stroke-width:1;vector-effect:non-scaling-stroke}
+@keyframes spin{to{rotate:360deg}}
+.vis .arch{position:absolute;z-index:1;inset:0;overflow:hidden;border-radius:999px 999px 1.25rem 1.25rem;background:var(--soil);clip-path:inset(100% 0 0 0);animation:reveal 1.4s .15s cubic-bezier(.2,.75,.15,1) forwards;box-shadow:0 30px 80px -30px rgba(0,0,0,.8)}
+@keyframes reveal{to{clip-path:inset(0)}}
+.vis .arch img,.vis .circ img{display:block;width:100%;height:100%;object-fit:cover;filter:sepia(.4) saturate(.9) contrast(1.05)}
+.vis .arch::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(21,15,10,.5),transparent 45%)}
+.vis .circ{position:absolute;z-index:2;right:-9%;bottom:7%;width:38%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:5px solid var(--bark);background:var(--clay);opacity:0;transform:scale(.8);animation:pop .9s 1s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes pop{to{opacity:1;transform:none}}
+.vis .chip{position:absolute;z-index:3;left:-2.2rem;bottom:14%;padding:.7rem 1.2rem;border-radius:999px;font-size:.92rem;color:var(--bone);opacity:0;animation:fade2 .9s 1.3s forwards}
+.vis .dots{position:absolute;z-index:3;left:-1.9rem;top:9%;bottom:30%;width:2px;background:linear-gradient(rgba(244,236,222,0),rgba(244,236,222,.35),rgba(244,236,222,0))}
+.vis .dots i{position:absolute;left:50%;width:.65rem;height:.65rem;translate:-50% 0;border-radius:50%;background:var(--c);opacity:.4;animation:glow 8s ease-in-out infinite;animation-delay:calc(var(--i)*.5s)}
+@keyframes glow{0%,30%,100%{opacity:.4;box-shadow:0 0 0 0 transparent}12%{opacity:1;box-shadow:0 0 16px 4px var(--c)}}
+@media(min-width:900px){.hx{grid-template-columns:1.1fr .9fr}.vis{justify-self:end;width:min(100%,30rem);margin-right:2rem}}
+
+/* apresentação */
+.grid2{display:grid;gap:2.5rem}
+@media(min-width:900px){.grid2{grid-template-columns:1fr 1fr;gap:6rem;align-items:start}}
+.intro h2{max-width:11ch;font-style:italic}
+.intro .txt{display:grid;gap:1.4rem;max-width:52ch;color:#4A3828;font-size:clamp(1.05rem,1rem + .3vw,1.2rem)}
+.intro .txt p:first-child{font-family:var(--serif);font-weight:300;font-size:clamp(1.3rem,1.05rem + 1vw,1.8rem);line-height:1.3;color:var(--ink)}
+
+/* abordagem */
+.split{display:grid;gap:2.5rem}
+@media(min-width:900px){.split{grid-template-columns:5fr 7fr;gap:5rem}.split .sticky{position:sticky;top:6rem;align-self:start}}
+.rows li{display:grid;gap:.4rem;padding-block:1.5rem;border-top:1px solid rgba(244,236,222,.18)}
+.rows li:last-child{border-bottom:1px solid rgba(244,236,222,.18)}
+.rows h3{font-size:clamp(1.4rem,1.1rem + 1vw,1.9rem)}
+.rows p{color:#CDBFAB;max-width:50ch}
+@media(min-width:700px){.rows li{grid-template-columns:12rem 1fr;gap:2rem;align-items:baseline}}
+
+/* chakras */
+.chakra .bg::after{background:linear-gradient(90deg,rgba(21,15,10,.94),rgba(21,15,10,.7))}
+.chakras{position:relative;padding-left:3.25rem;--fill:0%}
+.chakras::before,.chakras::after{content:"";position:absolute;left:.55rem;top:.6rem;width:2px;border-radius:2px}
+.chakras::before{bottom:.6rem;background:rgba(244,236,222,.16)}
+.chakras::after{height:var(--fill);background:linear-gradient(#B5452F,#D9772F,#E2B13C,#7FA05B,#5A9AAE,#4A63A8,#EADFC8);background-size:100% 100vh;transition:height .8s ease}
+.chakras li{position:relative;padding-block:1.4rem 1.6rem;--c:#fff}
+.chakras li::before{content:"";position:absolute;left:-3.25rem;top:1.75rem;width:1.15rem;height:1.15rem;border-radius:50%;border:1.5px solid var(--c);background:var(--bark);transition:background .6s,box-shadow .6s}
+.chakras h3{font-size:clamp(1.6rem,1.2rem + 1.4vw,2.3rem)}
+.chakras .kw{display:block;margin-top:.2rem;color:var(--c);font:italic 300 1.15rem var(--serif)}
+.chakras p{margin-top:.6rem;color:#CDBFAB;max-width:46ch}
+.js .chakras li{opacity:.4;transition:opacity .6s}
+.js .chakras li.on{opacity:1}
+.chakras li.on::before{background:var(--c);box-shadow:0 0 22px 4px var(--c)}
+.chakras li:nth-child(1){--c:#C9573D}.chakras li:nth-child(2){--c:#E08A3F}.chakras li:nth-child(3){--c:#E5B845}
+.chakras li:nth-child(4){--c:#8DB067}.chakras li:nth-child(5){--c:#6AA9BD}.chakras li:nth-child(6){--c:#6F86C9}.chakras li:nth-child(7){--c:#EADFC8}
+.chakra .lead{margin-top:1.5rem}
+
+/* benefícios */
+.ben ul{margin-top:clamp(2.5rem,6vw,4rem);display:grid;gap:0 clamp(1.5rem,4vw,3.5rem);grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr))}
+.ben li{position:relative;font:300 clamp(1.3rem,1.05rem + .9vw,1.7rem)/1.25 var(--serif);padding:1.5rem 0 2.25rem 2rem;border-top:1px solid rgba(42,27,18,.25)}
+.ben li::before{content:"";position:absolute;left:0;top:1.95rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--c)}
+.ben li:nth-child(1){--c:#B5452F}.ben li:nth-child(2){--c:#D9772F}.ben li:nth-child(3){--c:#D5A22C}.ben li:nth-child(4){--c:#6F8F4A}.ben li:nth-child(5){--c:#4F8EA3}.ben li:nth-child(6){--c:#4A63A8}
+
+/* split com imagem */
+.feature{display:grid;padding:0}
+.feature .ph{position:relative;min-height:min(70vh,34rem);background:var(--soil);overflow:hidden}
+.feature .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:sepia(.45) saturate(.85) contrast(1.02)}
+.feature .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(90,55,30,.35),rgba(90,55,30,.1));mix-blend-mode:multiply}
+.feature .tx{padding:clamp(3.5rem,8vw,7rem) var(--pad);display:flex;flex-direction:column;justify-content:center;gap:1.4rem}
+.feature .tx p{max-width:48ch}
+@media(min-width:900px){.feature{grid-template-columns:1fr 1fr;min-height:90vh}.feature .tx{padding-inline:clamp(2.5rem,6vw,6rem)}.feature.flip .ph{order:2}}
+.mods-t{margin-top:.5rem;color:var(--muted)}
+.mods{display:flex;flex-wrap:wrap;gap:.7rem}
+.mods li{padding:.7rem 1.3rem;border-radius:999px;font-size:.98rem}
+.inst{background:var(--bark);color:var(--bone)}
+.inst p{color:#D8CBB8}
+.inst .ph{background:#1E140D}
+@media(min-width:900px){.inst .ph{padding:clamp(2rem,5vw,4.5rem)}.inst .ph img{position:static;width:100%;height:100%;border-radius:999px 999px 0 0}.inst .ph::after{inset:clamp(2rem,5vw,4.5rem);border-radius:999px 999px 0 0}}
+.cred{padding:1rem 1.25rem;border:1px dashed rgba(244,236,222,.3);border-radius:1rem;font-size:.95rem;color:var(--muted)}
+
+/* depoimentos */
+.quotes{margin-top:clamp(2.5rem,6vw,4rem);display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr))}
+.quotes figure{padding:clamp(1.5rem,3vw,2.25rem);display:flex;flex-direction:column;justify-content:space-between;gap:2rem;background:rgba(255,255,255,.5);border-color:rgba(42,27,18,.12);box-shadow:0 24px 60px -30px rgba(42,27,18,.35),inset 0 1px 0 #fff}
+.quotes blockquote{margin:0;font:italic 300 clamp(1.2rem,1.05rem + .6vw,1.5rem)/1.38 var(--serif);color:var(--ink)}
+.quotes figcaption{font-size:.95rem;color:#5B4636}
+.quotes figcaption b{display:block;font-weight:500;color:var(--ink)}
+
+/* faq */
+details{border-top:1px solid rgba(244,236,222,.18)}
+details:last-child{border-bottom:1px solid rgba(244,236,222,.18)}
+summary{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;min-height:4.25rem;padding-block:1.1rem;cursor:pointer;list-style:none;font:400 clamp(1.15rem,1.05rem + .5vw,1.5rem)/1.3 var(--serif)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";flex:none;width:1rem;height:1rem;background:linear-gradient(var(--amber),var(--amber)) center/100% 1.5px no-repeat,linear-gradient(var(--amber),var(--amber)) center/1.5px 100% no-repeat;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 3rem 1.5rem 0;max-width:56ch;color:#CDBFAB;animation:fade .4s}
+@keyframes fade{from{opacity:0;transform:translateY(-6px)}}
+
+/* final */
+.final{text-align:center}
+.final .bg img{filter:sepia(.4) saturate(.9)}
+.final .bg::after{background:rgba(21,15,10,.6)}
+.final .glass{max-width:46rem;margin:0 auto;padding:clamp(2.5rem,6vw,4.5rem) clamp(1.5rem,5vw,4rem)}
+.final h2{margin-inline:auto;max-width:14ch}
+.final .lead{margin:1.5rem auto 0;color:#E3D8C5}
+.final .cta{margin-top:2.25rem}
+footer{background:var(--bark);color:var(--muted);font-size:.85rem;padding:1.75rem var(--pad);text-align:center}
+footer a{color:inherit}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hx h1 b,.hx .sub,.hx .cta,.vis .circ,.vis .chip{animation:none;opacity:1;transform:none}
+  .vis .arch{animation:none;clip-path:inset(0)}.vis .mandala,.vis .dots i{animation:none}.vis .dots i{opacity:.8}
+  details p{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header class="bar glass">
+  <a class="name" href="#topo">Helena Duarte<small>Yoga e Bem-Estar</small></a>
+  <a class="cta" href="#" data-cta>Agendar minha primeira aula</a>
+</header>
+
+<main>
+<!-- 1. Hero -->
+<section class="hero" id="topo">
+  <div class="wrap hx">
+    <div>
+      <h1 aria-label="Equilíbrio para o corpo, presença para a vida."><span class="l1" aria-hidden="true"><b>Equilíbrio para o corpo,</b></span><span class="l2" aria-hidden="true"><b>presença para a vida.</b></span></h1>
+      <p class="sub">Práticas de yoga que integram movimento, respiração e consciência, inspiradas na filosofia do yoga e no trabalho com os chakras.</p>
+      <a class="cta" href="#aulas">Conhecer as aulas</a>
+    </div>
+    <div class="vis" aria-hidden="true">
+      <svg class="mandala" viewBox="0 0 200 200"><circle cx="100" cy="100" r="99"/><circle cx="100" cy="100" r="82" stroke-dasharray="1 5" style="opacity:.6"/><circle cx="100" cy="100" r="66" style="opacity:.35"/><circle cx="100" cy="100" r="50" stroke-dasharray="2 6" style="opacity:.5"/></svg>
+      <div class="arch"><img src="https://unsplash.com/photos/VKGz5s94aQ0/download?force=true&w=1400" width="1400" height="1750" alt="" fetchpriority="high" onerror="this.remove()"></div>
+      <div class="circ"><img src="https://unsplash.com/photos/ETKSPU06AGI/download?force=true&w=600" width="600" height="600" alt="" onerror="this.remove()"></div>
+      <span class="chip glass">Presencial e online</span>
+      <div class="dots"><i style="--i:6;--c:#EADFC8;top:0.0%"></i><i style="--i:5;--c:#6F86C9;top:16.7%"></i><i style="--i:4;--c:#6AA9BD;top:33.3%"></i><i style="--i:3;--c:#8DB067;top:50.0%"></i><i style="--i:2;--c:#E5B845;top:66.7%"></i><i style="--i:1;--c:#E08A3F;top:83.3%"></i><i style="--i:0;--c:#C9573D;top:100.0%"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Apresentação -->
+<section class="intro light">
+  <div class="wrap grid2">
+    <h2>Um encontro com você mesma.</h2>
+    <div class="txt">
+      <p>Sou Helena Duarte, instrutora de yoga, e acredito que cultivar o bem-estar começa quando criamos espaço para escutar o corpo, reconhecer nossas emoções e estar mais presentes.</p>
+      <p>Minha abordagem une práticas tradicionais do yoga, respiração consciente e exploração dos chakras como um mapa simbólico de autoconhecimento — sem vínculos religiosos ou interpretações místicas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Minha abordagem -->
+<section class="approach">
+  <div class="bg"><img src="https://unsplash.com/photos/grOa7VBeFq0/download?force=true&w=1800" width="1800" height="1200" alt="" loading="lazy" style="filter:sepia(.5) saturate(.8)" onerror="this.remove()"></div>
+  <div class="wrap split">
+    <div class="sticky">
+      <h2>Corpo, energia e consciência.</h2>
+      <p class="lead" style="margin-top:1.5rem">Cada prática é conduzida com intenção, respeitando seu ritmo e seu momento.</p>
+    </div>
+    <ul class="rows">
+      <li><h3>Movimento consciente</h3><p>Posturas que desenvolvem mobilidade, equilíbrio e presença corporal.</p></li>
+      <li><h3>Respiração</h3><p>Técnicas para cultivar atenção e tranquilidade.</p></li>
+      <li><h3>Chakras</h3><p>Exploração dos centros energéticos como referências tradicionais para reflexão e autoconhecimento.</p></li>
+      <li><h3>Meditação</h3><p>Práticas de atenção plena e observação interior.</p></li>
+      <li><h3>Filosofia do yoga</h3><p>Princípios de consciência, equilíbrio e não julgamento aplicados à vida cotidiana.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4. Os chakras -->
+<section class="chakra">
+  <div class="bg"><img src="https://unsplash.com/photos/8xkImX3so8U/download?force=true&w=1800" width="1800" height="1200" alt="" loading="lazy" style="filter:sepia(.7) saturate(.8)" onerror="this.remove()"></div>
+  <div class="wrap split">
+    <div class="sticky">
+      <h2>Um caminho de autoconhecimento.</h2>
+      <p class="lead">Na tradição do yoga, os chakras são compreendidos como centros sutis associados a diferentes dimensões da experiência humana. Nas minhas aulas, eles são explorados como referências contemplativas para trabalhar a relação com o corpo, as emoções e a vida interior.</p>
+    </div>
+    <ol class="chakras" id="chakras">
+      <li><h3>Raiz</h3><span class="kw">Estabilidade</span><p>Presença, segurança e conexão com o momento presente.</p></li>
+      <li><h3>Sacral</h3><span class="kw">Fluidez</span><p>Criatividade, emoções e capacidade de adaptação.</p></li>
+      <li><h3>Plexo solar</h3><span class="kw">Vitalidade</span><p>Autonomia, intenção e confiança nas próprias escolhas.</p></li>
+      <li><h3>Cardíaco</h3><span class="kw">Abertura</span><p>Compaixão, acolhimento e relação consigo mesma.</p></li>
+      <li><h3>Laríngeo</h3><span class="kw">Expressão</span><p>Escuta, comunicação e autenticidade.</p></li>
+      <li><h3>Frontal</h3><span class="kw">Clareza</span><p>Atenção, percepção e discernimento.</p></li>
+      <li><h3>Coronário</h3><span class="kw">Consciência</span><p>Contemplação, conexão e reflexão sobre a experiência de existir.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 5. Benefícios -->
+<section class="ben light">
+  <div class="wrap">
+    <h2>Mais presença no seu cotidiano.</h2>
+    <p class="lead" style="margin-top:1.5rem">A prática regular pode contribuir para:</p>
+    <ul>
+      <li>Maior consciência corporal.</li>
+      <li>Redução do estresse e das tensões.</li>
+      <li>Melhora da mobilidade e do equilíbrio.</li>
+      <li>Mais atenção à respiração.</li>
+      <li>Desenvolvimento da concentração.</li>
+      <li>Uma relação mais consciente com emoções e pensamentos.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6. Sobre as aulas -->
+<section class="feature" id="aulas">
+  <div class="ph"><img src="https://unsplash.com/photos/ETKSPU06AGI/download?force=true&w=1400" width="1400" height="1750" alt="Mulher praticando yoga em estúdio" loading="lazy" onerror="this.remove()"></div>
+  <div class="tx">
+    <h2>Uma prática que respeita seu momento.</h2>
+    <p>As aulas combinam posturas, exercícios respiratórios, meditação e momentos de reflexão, com intensidade e condução adaptadas à experiência e às necessidades de cada aluna.</p>
+    <p class="mods-t">Modalidades:</p>
+    <ul class="mods">
+      <li class="glass">Aulas particulares.</li><li class="glass">Pequenos grupos.</li><li class="glass">Aulas presenciais.</li><li class="glass">Práticas online.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 7. Sobre Helena -->
+<section class="feature inst flip">
+  <div class="ph"><!-- Foto ilustrativa (banco de imagens) para o portfólio --><img src="https://unsplash.com/photos/EXtnZW9NbqM/download?force=true&w=1400" width="1400" height="1750" alt="Retrato ilustrativo de Helena Duarte" loading="lazy" onerror="this.remove()"></div>
+  <div class="tx">
+    <h2>Presença, acolhimento e propósito.</h2>
+    <p>Minha jornada no yoga nasceu do interesse pela relação entre corpo, mente e consciência.</p>
+    <p>Hoje, conduzo minhas aulas com uma abordagem que respeita as raízes filosóficas da prática e valoriza uma espiritualidade livre de dogmas: um espaço para cultivar presença, autoconhecimento e equilíbrio na vida cotidiana.</p>
+    <!-- SUBSTITUIR: formação, certificações, experiência e linhagem de estudos reais -->
+    <p class="cred">Inserir formação, certificações, experiência e linhagem de estudos reais.</p>
+  </div>
+</section>
+
+<!-- 8. Depoimentos -->
+<section class="light">
+  <div class="wrap">
+    <h2>Experiências que vão além do tapete.</h2>
+    <p class="lead" style="margin-top:1.5rem">Relatos de alunas sobre suas experiências com as aulas, a consciência corporal e a incorporação da prática no cotidiano.</p>
+    <!-- Depoimentos fictícios, apenas para o portfólio. Substituir por relatos reais, com autorização das alunas. -->
+    <div class="quotes">
+      <figure class="glass"><blockquote>“Descobri que escutar o corpo muda a forma como lido com o dia. Saio das aulas mais calma e, principalmente, mais presente.”</blockquote><figcaption><b>Marina L.</b>Aluna, pequeno grupo</figcaption></figure>
+      <figure class="glass"><blockquote>“Eu tinha receio de o trabalho com chakras ser algo esotérico. É o oposto: uma conversa cuidadosa e sem dogmas sobre o que sinto.”</blockquote><figcaption><b>Beatriz S.</b>Aluna, aulas particulares</figcaption></figure>
+      <figure class="glass"><blockquote>“Nunca tinha praticado yoga. A Helena adapta tudo ao meu ritmo, e a respiração virou parte da minha rotina, até no trabalho.”</blockquote><figcaption><b>Carolina P.</b>Aluna, práticas online</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="faq">
+  <div class="wrap" style="display:grid;gap:2.5rem;max-width:880px">
+    <h2>Perguntas frequentes</h2>
+    <div>
+      <details><summary>Preciso ter experiência com yoga?</summary><p>Não. As práticas são adaptadas ao seu nível e às suas possibilidades.</p></details>
+      <details><summary>Preciso seguir alguma religião?</summary><p>Não. A abordagem é não religiosa e aberta a diferentes visões de mundo.</p></details>
+      <details><summary>Como funciona o trabalho com os chakras?</summary><p>Eles são explorados a partir de referências tradicionais do yoga, como ferramentas contemplativas de autoconhecimento, sem promessas de cura ou resultados sobrenaturais.</p></details>
+      <details><summary>As aulas são individuais?</summary><p>Há opções individuais e em pequenos grupos, conforme disponibilidade.</p></details>
+      <details><summary>Como posso começar?</summary><p>Entre em contato para conhecer as modalidades e encontrar a prática mais adequada para você.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. CTA final -->
+<section class="final">
+  <div class="bg"><img src="https://unsplash.com/photos/ppEWJpVnEBY/download?force=true&w=1800" width="1800" height="1200" alt="" loading="lazy" style="object-position:30% 50%" onerror="this.remove()"></div>
+  <div class="wrap">
+    <div class="glass">
+      <h2>Cultive presença. Encontre seu equilíbrio.</h2>
+      <p class="lead">Permita-se desacelerar, respirar e construir uma relação mais consciente consigo mesma.</p>
+      <a class="cta" href="#" data-cta>Agendar minha primeira aula</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Fotografias: <a href="https://unsplash.com" rel="noopener">Unsplash</a> (Lucas van Oort, Joshua Woroniecki, Pascal Debrunner, Nasim Keshmiri, Mediamodifier). Foto e depoimentos ilustrativos, para portfólio.</footer>
+
+<script>
+document.documentElement.classList.add("js");
+// Destino dos botões de agendamento: substitua pela URL real (WhatsApp, agenda...).
+const CTA_URL = "";
+document.querySelectorAll("[data-cta]").forEach(a => { if (CTA_URL) a.href = CTA_URL; else a.addEventListener("click", e => e.preventDefault()); });
+// Coluna de chakras: acende da raiz à coroa conforme a rolagem.
+const list = document.getElementById("chakras"), items = [...list.children];
+const io = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting) e.target.classList.add("on"); });
+  const last = items.reduce((n, el, i) => el.classList.contains("on") ? i : n, -1);
+  list.style.setProperty("--fill", last < 0 ? "0%" : ((items[last].offsetTop + 40) / list.offsetHeight * 100) + "%");
+}, {rootMargin: "0px 0px -35% 0px"});
+items.forEach(i => io.observe(i));
+</script>
+</body>
+</html>
